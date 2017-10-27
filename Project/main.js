@@ -1,16 +1,19 @@
 
+
+var PlacesArray = [];
+var icon = "icon.png";
+
+
 function Place(latitude, longitude) {
     this.latitude = latitude;
     this.longitude = longitude;
 }
 
-var PlacesArray = [];
-var icon = "icon.png";
-
 var map = new GMaps({
     el: '#map',
     lat: -12.043333,
     lng: -77.028333,
+    zoom: 12,
 
     click: function(e) {
         var latitude = e.latLng.lat();
@@ -33,14 +36,30 @@ var map = new GMaps({
                 strokeOpacity: 0.6,
                 strokeWeight: 6
             });
-            Distance();
         }
     }
 });
 
-function Distance(){
-    srcLocation = new google.maps.LatLng(PlacesArray[0].latitude, PlacesArray[0].longitude);
-    dstLocation = new google.maps.LatLng(PlacesArray[1].latitude, PlacesArray[1].longitude);
-    var distance = google.maps.geometry.spherical.computeDistanceBetween(srcLocation, dstLocation)
-    console.log('distance = ' + distance/1000); // Distance in Kms.
+function Distance() {
+    if (PlacesArray.length >= 2) {
+
+        var DistanceMatrix = new Array(PlacesArray.length);
+
+        for(var i = 0; i<PlacesArray.length; ++i){
+
+            DistanceMatrix[i] = new Array(PlacesArray.length)
+        }
+
+       for(i = 0; i<PlacesArray.length; ++i){
+            for(var j = 0; j<PlacesArray.length; ++j){
+
+                Origin = new google.maps.LatLng(PlacesArray[i].latitude, PlacesArray[i].longitude);
+                Destination = new google.maps.LatLng(PlacesArray[j].latitude, PlacesArray[j].longitude);
+                var DistanceCal = google.maps.geometry.spherical.computeDistanceBetween(Origin, Destination);
+
+                DistanceMatrix[i][j] = DistanceCal/1000;
+            }
+        }
+        console.log(DistanceMatrix);
+    }
 }
