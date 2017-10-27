@@ -16,9 +16,23 @@ var map = new GMaps({
         var longitude = e.latLng.lng();
         map.addMarker({
             lat: latitude,
-            lng: longitude
+            lng: longitude,
+            title: 'Spot ' + PlacesArray.length
         });
 
         PlacesArray.push(new Place(latitude,longitude));
+        var pos = PlacesArray.length - 2;
+
+        if (PlacesArray.length >= 2){
+            map.drawRoute({
+                origin: [PlacesArray[pos].latitude, PlacesArray[pos].longitude],
+                destination: [PlacesArray[pos+1].latitude, PlacesArray[pos+1].longitude],
+                travelMode: 'driving',
+                strokeColor: '#131540',
+                strokeOpacity: 0.6,
+                strokeWeight: 6
+            })
+        }
     }
 });
+
