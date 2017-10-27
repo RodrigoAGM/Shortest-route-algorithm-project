@@ -5,6 +5,7 @@ function Place(latitude, longitude) {
 }
 
 var PlacesArray = [];
+var icon = "icon.png";
 
 var map = new GMaps({
     el: '#map',
@@ -17,9 +18,9 @@ var map = new GMaps({
         map.addMarker({
             lat: latitude,
             lng: longitude,
-            title: 'Spot ' + PlacesArray.length
+            title: 'Spot ' + PlacesArray.length,
+            icon: icon
         });
-
         PlacesArray.push(new Place(latitude,longitude));
         var pos = PlacesArray.length - 2;
 
@@ -35,4 +36,5 @@ var map = new GMaps({
         }
     }
 });
+
 
