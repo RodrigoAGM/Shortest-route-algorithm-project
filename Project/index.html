@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <!--<script src="http://maps.google.com/maps/api/js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY7qrHJLMlLzOt-lE0g4j6-WfRvgKAls4&callback=initMap"
-            type="text/javascript"></script>-->
+    <title> SHORTEST ROUTE ALGORITHM </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5hRjyikq8wxl8XjV9a5zp8Z_QK-3vAmg&libraries=geometry"></script>
     <script src="gmaps.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+<!--
 <div id="ButtonDiv">
     <button id="btnDistances" onclick="Distance()">Create matrix</button>
     <button id="btnStep" onclick="Step()">Calculate distances</button>
@@ -17,7 +17,16 @@
     <p id="OriginalRoute">Route: </p>
     <p id="NewRoute">New route: </p>
 </div>
+-->
+
+    <a class="btn-floating btn-large waves-effect waves-light blue" id="button-trash"><i class="material-icons">add</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light red " id="button-trash2"><i class="material-icons">add</i></a>
+
 <div id="map"></div>
-<script src="main.js"></script>
+
+    <!--  ADDING LIBRARIES -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
