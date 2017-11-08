@@ -5,6 +5,11 @@ var ArrayofArrays = [];
 var nElements;
 var DistancesMatrix;
 var service = new google.maps.DistanceMatrixService();
+var btnStep = document.getElementById('btnStep');
+var btnDistance = document.getElementById('btnDistances');
+var btnOpt = document.getElementById('btnOptimize');
+btnStep.disabled = true;
+btnOpt.disabled = true;
 
 function Place(latitude, longitude) {
     this.latitude = latitude;
@@ -122,8 +127,8 @@ function Distance() {
             DistancesMatrix[i] = new Array(PlacesArray.length);
         }
         BuildArrayofArrays();
-        var btnDistance = document.getElementById('btnDistances');
         btnDistance.disabled = true;
+        btnStep.disabled = false;
     }
     //console.log(DistancesMatrix);
 }
@@ -132,22 +137,28 @@ var w=0;
 var r=0;
 
 function Step(){
+
     console.log(w+'  '+r);
     CalDistances(w,r);
+
     if(r === nElements-1) {
         if (w !== nElements-1) {
             w++;
             r = 0;
         }
         else{
-            var btnStep = document.getElementById('btnStep');
             btnStep.disabled =true;
+            btnStep.innerHTML = "Distances calculated!";
+            btnOpt.disabled = false;
             console.log(DistancesMatrix);
+            return;
         }
     }
     else{r++;}
-}
 
+    btnStep.innerHTML = "Calculating..."; btnStep.disabled =true;
+    setTimeout(function(){ btnStep.disabled = false; btnStep.innerHTML = "Calculate distances";},4000);
+}
 
 function CalDistances(k,l){
 
@@ -167,8 +178,8 @@ function CalDistances(k,l){
                     for (var j = 0; j < results.length; j++) {
 
                         var element = results[j];
-                        var distance = element.distance.value;
-                       DistancesMatrix[i+(10*k)][j+(10*l)]=distance;
+                        var dist = element.distance.value;
+                       DistancesMatrix[i+(10*k)][j+(10*l)]=dist;
                         //console.log((i+(10*k)) + '_' +(j+(10*l)));
                     }
                 }
@@ -201,14 +212,15 @@ function OptimizeRoute(){
 
     map.cleanRoute();
 
-    for(var i = 0; i<PlacesArray.length-1; ++i){
+    for(var i = 0; i<PlacesArray.length-1; i++){
 
         minnum = GetMayor(DistancesMatrix[pos]) + 10;
 
-        for(var j = 0; j<PlacesArray.length; ++j){
-            if(DistancesMatrix[pos][j] < minnum && DistancesMatrix[pos][j] != 0 && Route.indexOf(j) === -1){
+        for (var j = 0; j < PlacesArray.length; ++j) {
+            if (DistancesMatrix[pos][j] < minnum && DistancesMatrix[pos][j] != 0 && Route.indexOf(j) === -1) {
                 minnum = DistancesMatrix[pos][j];
                 aux = j;
+                console.log(Route.indexOf(j));
             }
 
         }
@@ -217,18 +229,17 @@ function OptimizeRoute(){
         Route.push(aux);
 
         map.drawRoute({
-            origin: [PlacesArray[Route[Route.length-2]].latitude, PlacesArray[Route[Route.length-2]].longitude],
-            destination: [PlacesArray[Route[Route.length-1]].latitude, PlacesArray[Route[Route.length-1]].longitude],
+            origin: [PlacesArray[Route[Route.length - 2]].latitude, PlacesArray[Route[Route.length - 2]].longitude],
+            destination: [PlacesArray[Route[Route.length - 1]].latitude, PlacesArray[Route[Route.length - 1]].longitude],
             travelMode: 'driving',
             strokeColor: '#FF0000',
             strokeOpacity: 0.6,
             strokeWeight: 6
         });
 
-        if(NewRoute.innerHTML !== "New route: "){
+        if (NewRoute.innerHTML !== "New route: ") {
             NewRoute.innerHTML += " - ";
         }
         NewRoute.innerHTML += aux;
     }
-    console.log(Route);
 }
