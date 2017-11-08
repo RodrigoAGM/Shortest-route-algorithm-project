@@ -11,7 +11,7 @@
 <body>
 <!--
 <div id="ButtonDiv">
-    <button id="btnDistances" onclick="Distance()">Create matrix</button>
+    <button id="btnDistances" ">Create matrix</button>
     <button id="btnStep" onclick="Step()">Calculate distances</button>
     <button id="btnOptimize" onclick="OptimizeRoute()">Optimize routes</button>
     <p id="OriginalRoute">Route: </p>
@@ -19,8 +19,11 @@
 </div>
 -->
 
-    <a class="btn-floating btn-large waves-effect waves-light blue" id="button-trash"><i class="material-icons">add</i></a>
-    <a class="btn-floating btn-large waves-effect waves-light red " id="button-trash2"><i class="material-icons">add</i></a>
+<!-- Modal Structure -->
+
+    <a class="btn-floating btn-large waves-effect waves-light blue" id="button-matrix" onclick="Distance()"><i class="material-icons">apps</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light red " id="button-distance"><i class="material-icons">directions</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light green " id="button-optimize"><i class="material-icons">trending_up</i></a>
 
 <div id="map"></div>
 

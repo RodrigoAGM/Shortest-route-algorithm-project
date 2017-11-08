@@ -1,4 +1,8 @@
 
+$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('#modalPresent').modal();
+});
 
 
 /*================== LOGIC OF THE PROGRAM ==========================*/
@@ -10,7 +14,11 @@ var ArrayofArrays = [];
 var nElements;
 var DistancesMatrix;
 var service = new google.maps.DistanceMatrixService();
-
+/*var btnStep = document.getElementById('btnStep');
+var btnDistance = document.getElementById('btnDistances');
+var btnOpt = document.getElementById('btnOptimize');
+btnStep.disabled = true;
+btnOpt.disabled = true;*/
 
 function Place(latitude, longitude) {
     this.latitude = latitude;

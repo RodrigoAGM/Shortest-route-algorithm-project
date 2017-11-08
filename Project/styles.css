@@ -6,7 +6,7 @@
     height: 100% ;
 }
 
-#button-trash{
+#button-matrix{
     position: absolute;
     z-index: 10;
     bottom: 0;
@@ -14,10 +14,19 @@
     margin: 3%;
 }
 
-#button-trash2{
+#button-distance{
     position: absolute;
     z-index: 10;
     bottom: 0;
     left: 5%;
+    margin: 3%;
+}
+
+
+#button-optimize{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 10%;
     margin: 3%;
 }
