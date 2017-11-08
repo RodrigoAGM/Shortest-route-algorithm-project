@@ -30,3 +30,10 @@
     left: 10%;
     margin: 3%;
 }
+
+#modal-button{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    margin: 3%;
+}

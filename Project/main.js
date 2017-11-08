@@ -5,6 +5,20 @@ $(document).ready(function(){
 });
 
 
+$('.modal').modal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        inDuration: 300, // Transition in duration
+        outDuration: 200, // Transition out duration
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%', // Ending top style attribute
+        ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+            console.log(modal, trigger , "open");
+        },
+        complete: function() { console.log("close") } // Callback for Modal close
+    }
+);
+
 /*================== LOGIC OF THE PROGRAM ==========================*/
 
 var PlacesArray = [];
@@ -95,6 +109,7 @@ var map = new GMaps({
                 strokeWeight: 6
             });
         }
+
         var TextRoute = document.getElementById('OriginalRoute');
         if(TextRoute.innerHTML !== "Route: "){
             TextRoute.innerHTML += " - ";
@@ -136,8 +151,10 @@ function Distance() {
             DistancesMatrix[i] = new Array(PlacesArray.length);
         }
         BuildArrayofArrays();
-        btnDistance.disabled = true;
-        btnStep.disabled = false;
+        $("#button-matrix").addClass("disabled");
+        $("#button-distance").removeClass("disabled")
+        //btnDistance.disabled = true;
+        //btnStep.disabled = false;
     }
     //console.log(DistancesMatrix);
 }
@@ -156,17 +173,26 @@ function Step(){
             r = 0;
         }
         else{
-            btnStep.disabled =true;
-            btnStep.innerHTML = "Distances calculated!";
-            btnOpt.disabled = false;
+            $("#button-distance").addClass("disabled");
+            $("#button-optimize").removeClass("disabled");
+            console.log("distance calculkadas");
+            //btnStep.disabled =true;
+            //btnStep.innerHTML = "Distances calculated!";
+            //btnOpt.disabled = false;
             console.log(DistancesMatrix);
             return;
         }
     }
     else{r++;}
 
-    btnStep.innerHTML = "Calculating..."; btnStep.disabled =true;
-    setTimeout(function(){ btnStep.disabled = false; btnStep.innerHTML = "Calculate distances";},4000);
+    console.log("Calculating...");
+    //btnStep.disabled =true;
+    $("#button-distance").addClass("disabled");
+    setTimeout(function(){
+        $("#button-distance").removeClass("disabled");
+        //btnStep.disabled = false;
+        console.log("Calculate distances");
+        },4000);
 }
 
 function CalDistances(k,l){
