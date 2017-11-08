@@ -150,6 +150,7 @@ function Distance() {
         for(var i = 0; i<PlacesArray.length; ++i){
             DistancesMatrix[i] = new Array(PlacesArray.length);
         }
+        Materialize.toast('Matrix generated', 3000);
         BuildArrayofArrays();
         $("#button-matrix").addClass("disabled");
         $("#button-distance").removeClass("disabled")
@@ -175,7 +176,8 @@ function Step(){
         else{
             $("#button-distance").addClass("disabled");
             $("#button-optimize").removeClass("disabled");
-            console.log("distance calculkadas");
+            Materialize.toast('Distances Calculated!', 4000)
+            //console.log("distance calculkadas");
             //btnStep.disabled =true;
             //btnStep.innerHTML = "Distances calculated!";
             //btnOpt.disabled = false;
@@ -185,7 +187,8 @@ function Step(){
     }
     else{r++;}
 
-    console.log("Calculating...");
+    //console.log("Calculating...");
+    Materialize.toast('Calculating ... ', 4000);
     //btnStep.disabled =true;
     $("#button-distance").addClass("disabled");
     setTimeout(function(){
@@ -276,5 +279,7 @@ function OptimizeRoute(){
             NewRoute.innerHTML += " - ";
         }
         NewRoute.innerHTML += aux;
+
     }
+    Materialize.toast('Routes optimized!!', 4000);
 }
