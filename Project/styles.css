@@ -31,6 +31,14 @@
     margin: 3%;
 }
 
+#button-restart{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 15%;
+    margin: 3%;
+}
+
 #modal-button{
     position: absolute;
     bottom: 0;

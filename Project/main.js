@@ -28,6 +28,7 @@ var ArrayofArrays = [];
 var nElements;
 var DistancesMatrix;
 var service = new google.maps.DistanceMatrixService();
+var blocked = false;
 /*var btnStep = document.getElementById('btnStep');
 var btnDistance = document.getElementById('btnDistances');
 var btnOpt = document.getElementById('btnOptimize');
@@ -85,36 +86,40 @@ var map = new GMaps({
     zoom: 12,
 
     click: function(e) {
-        var latitude = e.latLng.lat();
-        var longitude = e.latLng.lng();
-        map.addMarker({
-            lat: latitude,
-            lng: longitude,
-            title: 'Spot ' + PlacesArray.length,
-            icon: icon,
-            infoWindow: {
-                content: 'Point '+ PlacesArray.length
-            }
-        });
-        PlacesArray.push(new Place(latitude,longitude));
-        var pos = PlacesArray.length - 2;
 
-        if (PlacesArray.length >= 2) {
-            map.drawRoute({
-                origin: [PlacesArray[pos].latitude, PlacesArray[pos].longitude],
-                destination: [PlacesArray[pos + 1].latitude, PlacesArray[pos + 1].longitude],
-                travelMode: 'driving',
-                strokeColor: '#131540',
-                strokeOpacity: 0.6,
-                strokeWeight: 6
+        if(blocked === false) {
+
+            var latitude = e.latLng.lat();
+            var longitude = e.latLng.lng();
+            map.addMarker({
+                lat: latitude,
+                lng: longitude,
+                title: 'Spot ' + PlacesArray.length,
+                icon: icon,
+                infoWindow: {
+                    content: 'Point ' + PlacesArray.length
+                }
             });
-        }
+            PlacesArray.push(new Place(latitude, longitude));
+            var pos = PlacesArray.length - 2;
 
-        var TextRoute = document.getElementById('OriginalRoute');
-        if(TextRoute.innerHTML !== "Route: "){
-            TextRoute.innerHTML += " - ";
+            if (PlacesArray.length >= 2) {
+                map.drawRoute({
+                    origin: [PlacesArray[pos].latitude, PlacesArray[pos].longitude],
+                    destination: [PlacesArray[pos + 1].latitude, PlacesArray[pos + 1].longitude],
+                    travelMode: 'driving',
+                    strokeColor: '#131540',
+                    strokeOpacity: 0.6,
+                    strokeWeight: 6
+                });
+            }
+
+            var TextRoute = document.getElementById('OriginalRoute');
+            if (TextRoute.innerHTML !== "Route: ") {
+                TextRoute.innerHTML += " - ";
+            }
+            TextRoute.innerHTML += PlacesArray.length - 1;
         }
-        TextRoute.innerHTML += PlacesArray.length-1;
     }
 });
 
@@ -142,6 +147,25 @@ var map = new GMaps({
     }
 }**/
 
+function Restart(){
+    blocked = false;
+    $("#button-matrix").removeClass("disabled");
+    $("#button-optimize").addClass("disabled");
+    $("#button-restart").addClass("disabled");
+    map.removeMarkers();
+    map.removePolylines();
+    DistancesMatrix = null;
+    PlacesArray = [];
+    LatLngArray = [];
+    ArrayofArrays = [];
+    nElements = 0;
+    var TextRoute = document.getElementById('OriginalRoute');
+    TextRoute.innerHTML = "Route: ";
+    var NewRoute = document.getElementById('NewRoute');
+    NewRoute.innerHTML = "New route: ";
+    Materialize.toast('Everything restarted!', 4000);
+}
+
 function Distance() {
 
     if (PlacesArray.length >= 2) {
@@ -153,7 +177,8 @@ function Distance() {
         Materialize.toast('Matrix generated', 3000);
         BuildArrayofArrays();
         $("#button-matrix").addClass("disabled");
-        $("#button-distance").removeClass("disabled")
+        $("#button-distance").removeClass("disabled");
+        blocked = true;
         //btnDistance.disabled = true;
         //btnStep.disabled = false;
     }
@@ -176,7 +201,7 @@ function Step(){
         else{
             $("#button-distance").addClass("disabled");
             $("#button-optimize").removeClass("disabled");
-            Materialize.toast('Distances Calculated!', 4000)
+            Materialize.toast('Distances Calculated!', 4000);
             //console.log("distance calculkadas");
             //btnStep.disabled =true;
             //btnStep.innerHTML = "Distances calculated!";
@@ -282,4 +307,6 @@ function OptimizeRoute(){
 
     }
     Materialize.toast('Routes optimized!!', 4000);
+    $("#button-optimize").addClass("disabled");
+    $("#button-restart").removeClass("disabled");
 }
