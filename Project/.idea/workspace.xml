@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="102">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -27,16 +27,19 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="159" column="98" lean-forward="false" selection-start-line="159" selection-start-column="98" selection-end-line="159" selection-end-column="98" />
+            <state relative-caret-position="549">
+              <caret line="312" column="0" lean-forward="true" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#Place#0" expanded="false" />
                 <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-                <element signature="e#1380#2557#0" expanded="false" />
-                <element signature="n#!!doc;n#Distance#0" expanded="false" />
+                <element signature="e#2288#3628#0" expanded="false" />
+                <element signature="n#!!doc;n#Restart#0" expanded="false" />
+                <element signature="n#!!block;n#Restart#0" expanded="false" />
                 <element signature="n#!!block;n#Distance#0" expanded="false" />
+                <element signature="n#!!block;n#Step#0" expanded="false" />
                 <element signature="n#!!block;n#CalDistances#0" expanded="false" />
                 <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+                <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -45,18 +48,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gmaps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmaps.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -92,7 +85,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -114,6 +107,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,8 +120,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,16 +156,16 @@
       <workItem from="1509092234033" duration="28000" />
       <workItem from="1509092366588" duration="71000" />
       <workItem from="1509241222071" duration="24819000" />
-      <workItem from="1510102557951" duration="5872000" />
+      <workItem from="1510102557951" duration="7874000" />
+      <workItem from="1510537378947" duration="4804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51393000" />
+    <option name="totallyTimeSpent" value="58199000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23645681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -205,6 +198,41 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4369">
+          <caret line="257" column="52" lean-forward="false" selection-start-line="257" selection-start-column="52" selection-end-line="257" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!block;n#Place#0" expanded="false" />
+            <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
+            <element signature="n#!!block;n#CalDistances#0" expanded="false" />
+            <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmaps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -220,11 +248,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -276,11 +307,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -300,11 +334,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -340,11 +377,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -380,11 +420,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -436,11 +479,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -460,11 +506,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -500,11 +549,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -548,11 +600,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -580,11 +635,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -620,11 +678,14 @@
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -647,40 +708,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gmaps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        <state relative-caret-position="11254">
+          <caret line="662" column="26" lean-forward="false" selection-start-line="662" selection-start-column="26" selection-end-line="662" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="27" />
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="159" column="98" lean-forward="false" selection-start-line="159" selection-start-column="98" selection-end-line="159" selection-end-column="98" />
+        <state relative-caret-position="549">
+          <caret line="312" column="0" lean-forward="true" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#Place#0" expanded="false" />
             <element signature="n#!!block;n#BuildArrayofArrays#0" expanded="false" />
-            <element signature="e#1380#2557#0" expanded="false" />
-            <element signature="n#!!doc;n#Distance#0" expanded="false" />
+            <element signature="e#2288#3628#0" expanded="false" />
+            <element signature="n#!!doc;n#Restart#0" expanded="false" />
+            <element signature="n#!!block;n#Restart#0" expanded="false" />
             <element signature="n#!!block;n#Distance#0" expanded="false" />
+            <element signature="n#!!block;n#Step#0" expanded="false" />
             <element signature="n#!!block;n#CalDistances#0" expanded="false" />
             <element signature="n#!!block;n#GetMayor#0" expanded="false" />
+            <element signature="n#!!block;n#OptimizeRoute#0" expanded="false" />
           </folding>
         </state>
       </provider>
